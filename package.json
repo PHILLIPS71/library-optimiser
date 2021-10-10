@@ -1,12 +1,20 @@
 {
   "name": "library-optimiser",
   "version": "0.1.0",
-  "private": true,
+  "description": "A web application to optimise video libraries",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "author": "Jordan Phillips",
+  "repository": "https://github.com/PHILLIPS71/library-optimiser",
+  "bugs": "https://github.com/PHILLIPS71/library-optimiser/issues",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --fix --ext .ts,.tsx ./src",
+    "check-types": "tsc --pretty",
+    "format": "pretty-quick --staged",
+    "validate": "npm-run-all --parallel check-types format lint",
+    "serve:dev": "next dev",
+    "serve:pro": "next start",
+    "build:pro": "next build"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -14,9 +22,30 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@types/react": "17.0.27",
-    "eslint": "8.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
     "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
     "typescript": "4.4.3"
+  },
+  "lint-staged": {
+    "*.+(js|ts|tsx)": [
+      "eslint '*/**/*.{ts,tsx}' --fix"
+    ]
   }
 }
