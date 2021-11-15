@@ -6,7 +6,7 @@ const BaseTheme: DefaultTheme = {
   },
   breakpoints: ['48em', '64em', '76em', '88em'],
   colors: {
-    primary: '#45ce8f',
+    primary: '#23a166',
     secondary: '#001e26',
     accent: '#06f4b6',
 
@@ -18,6 +18,8 @@ const BaseTheme: DefaultTheme = {
     info: '#eff3fe',
     warning: '#fffaf0',
     danger: '#ffefed',
+
+    blue: '#58a6ff',
 
     grays: {
       0: '#f6f6f7',
@@ -37,7 +39,7 @@ const BaseTheme: DefaultTheme = {
     primary: 'Nexa Bold',
     secondary: 'Montserrat',
     tertiary: 'DM Sans',
-    text: 'Roboto',
+    text: 'DM Sans',
   },
   typography: {
     font12: {

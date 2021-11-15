@@ -21,6 +21,8 @@ type BaseColors = {
   white: string
   black: string
   background: string
+
+  blue: string
 }
 
 export type Breakpoints = {
