@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import NavigationSidebar from '@/layouts/compositions/NavigationSidebar'
+
 const ContentContainer = styled.div`
   box-sizing: border-box;
   margin-left: 260px;
@@ -13,6 +15,7 @@ const ContentContainer = styled.div`
 
 const DefaultLayout: React.FC = ({ children }) => (
   <>
+    <NavigationSidebar />
 
     <ContentContainer>{children}</ContentContainer>
   </>
