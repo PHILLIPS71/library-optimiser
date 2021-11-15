@@ -1,10 +1,18 @@
-import '../styles/globals.css'
-
 import type { AppProps } from 'next/app'
 
+import { ApolloProvider } from '@apollo/client'
 import React from 'react'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { useApollo } from '@/library/apollo/apollo'
+
+const Application = ({ Component, pageProps }: AppProps) => {
+  const apollo = useApollo(pageProps)
+
+  return (
+    <ApolloProvider client={apollo}>
+        <Component {...pageProps} />
+    </ApolloProvider>
+  )
 }
-export default MyApp
+
+export default Application
