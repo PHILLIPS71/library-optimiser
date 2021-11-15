@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const TableCell = styled.td`
-  padding: 0.5em 0.75em;
+  padding: 8px 16px;
   vertical-align: middle;
 
   ${(props) => props.theme.typography.font14}

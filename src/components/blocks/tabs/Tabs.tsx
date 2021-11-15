@@ -19,9 +19,7 @@ type TabComponent = React.FC & {
   Tab: typeof TabsTab
 }
 
-const TabElement = styled.div`
-  margin-bottom: 12px;
-`
+const TabElement = styled.div``
 
 const Tabs: TabComponent = ({ children }) => {
   const [active, setActive] = React.useState<number>(0)
